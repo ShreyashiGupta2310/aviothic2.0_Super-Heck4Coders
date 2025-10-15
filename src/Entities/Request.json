@@ -1,0 +1,76 @@
+{
+  "name": "Request",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Short title of the help request"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of what help is needed"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "food",
+        "water",
+        "medical",
+        "shelter",
+        "other"
+      ],
+      "description": "Type of help needed"
+    },
+    "urgency": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default": "medium",
+      "description": "How urgent the request is"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "in_progress",
+        "resolved"
+      ],
+      "default": "open",
+      "description": "Current status of the request"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "Location latitude"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "Location longitude"
+    },
+    "location_name": {
+      "type": "string",
+      "description": "Human-readable location name"
+    },
+    "photo_url": {
+      "type": "string",
+      "description": "Optional photo of the situation"
+    },
+    "assigned_volunteer": {
+      "type": "string",
+      "description": "Email of volunteer who accepted the request"
+    },
+    "requester_contact": {
+      "type": "string",
+      "description": "Contact information for the person requesting help"
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "category",
+    "latitude",
+    "longitude"
+  ]
+}

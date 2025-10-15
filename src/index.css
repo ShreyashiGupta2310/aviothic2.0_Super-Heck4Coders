@@ -1,0 +1,169 @@
+/* ---------------- Root Theme Colors ---------------- */
+
+
+/* =======================
+   🌐 GLOBAL STYLES
+========================= */
+
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  background-color: #f8fafc;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.5px;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* Smooth button hover animations */
+button {
+  transition: all 0.3s ease-in-out !important;
+}
+
+/* =======================
+   🌟 BUTTON STYLES
+========================= */
+.btn-primary {
+  background: linear-gradient(135deg, #E63946, #D62839);
+  color: #fff;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #D62839, #C1121F);
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #06D6A0, #05BF8E);
+  color: #fff;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #05BF8E, #04AA7C);
+  transform: translateY(-3px);
+}
+
+/* =======================
+   🎬 HERO SECTION
+========================= */
+section.relative {
+  position: relative;
+}
+
+section.relative::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent 60%);
+  z-index: 0;
+}
+
+section.relative .relative {
+  z-index: 10;
+}
+
+/* =======================
+   📱 RESPONSIVE DESIGN
+========================= */
+
+/* Smaller screens (tablets and below) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 1.75rem !important;
+  }
+
+  p {
+    font-size: 1rem !important;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.9rem 1rem !important;
+  }
+
+  section.py-20 {
+    padding: 3rem 1rem !important;
+  }
+
+  .grid.md\:grid-cols-3,
+  .grid.md\:grid-cols-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .text-center.mb-16 {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Larger screens (desktop) */
+@media (min-width: 1024px) {
+  .max-w-7xl {
+    max-width: 1200px;
+  }
+
+  .hero-content {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* =======================
+   💫 ANIMATIONS
+========================= */
+
+/* Fade-in animation for smooth entry */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+/* Glow effect on icons */
+.icon-glow {
+  filter: drop-shadow(0 0 6px rgba(6, 214, 160, 0.7));
+}
+
+/* =======================
+   🧩 FEATURE CARDS
+========================= */
+.bg-gradient-to-br.from-gray-50 {
+  transition: all 0.3s ease-in-out;
+}
+
+.bg-gradient-to-br.from-gray-50:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* =======================
+   🌍 FOOTER GRADIENT (if needed later)
+========================= */
+footer {
+  background: linear-gradient(to right, #1D3557, #2A4A73);
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+}
